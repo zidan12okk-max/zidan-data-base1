@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Zidane Ibrahimovich — Investor Aspirant</title>
+
+<!-- 💅 Gaya CSS -->
+<style>
+:root {
+  --bg: #0b0c0f;
+  --card: #0f1114;
+  --muted: #9aa3b2;
+  --accent: #00d1b2;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+body {
+  background: linear-gradient(180deg,#030309 0%,#0b0c10 100%);
+  color:#e7eef6;
+}
+header {
+  padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,0.05);
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  max-width:1000px;
+  margin:auto;
+}
+.brand{font-weight:700;font-size:20px;}
+nav a{
+  color:var(--muted);
+  margin-left:16px;
+  text-decoration:none;
+}
+nav a.active{color:var(--accent);font-weight:600;}
+main{max-width:1000px;margin:auto;padding:24px;}
+.hero{display:grid;grid-template-columns:1fr 400px;gap:24px;align-items:center;}
+.intro h2{font-size:26px;margin-bottom:10px;}
+.intro p{color:var(--muted);line-height:1.6;}
+.btn{
+  display:inline-block;
+  margin-top:16px;
+  padding:10px 16px;
+  border-radius:10px;
+  border:1px solid rgba(0,209,178,0.2);
+  color:var(--accent);
+  background:rgba(0,209,178,0.08);
+  text-decoration:none;
+  font-weight:600;
+}
+.btn:hover{background:rgba(0,209,178,0.15);}
+.chart-card{
+  background:var(--card);
+  padding:16px;
+  border-radius:12px;
+  box-shadow:0 8px 24px rgba(2,6,23,0.6);
+}
+footer{
+  text-align:center;
+  color:var(--muted);
+  padding:24px 0;
+  border-top:1px solid rgba(255,255,255,0.05);
+  margin-top:50px;
+}
+
+/* Profil */
+.profile{
+  display:none;
+  background:var(--card);
+  padding:24px;
+  border-radius:14px;
+  box-shadow:0 8px 24px rgba(2,6,23,0.4);
+}
+.profile.active{display:block;}
+.profile-meta{display:flex;align-items:center;gap:18px;margin-bottom:20px;}
+.avatar-placeholder{
+  width:90px;height:90px;border-radius:50%;
+  background:#111419;color:var(--muted);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;font-weight:700;
+}
+.subtitle{color:var(--muted);}
+.profile ul{list-style:none;color:var(--muted);margin-top:8px;}
+.profile ul li{margin-bottom:6px;}
+.link-btn{color:var(--accent);text-decoration:none;font-weight:600;}
+@media(max-width:768px){
+  .hero{grid-template-columns:1fr;}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="brand">Zidane Ibrahimovich</div>
+  <nav>
+    <a href="#" class="nav-link active" id="homeLink">Home</a>
+    <a href="#" class="nav-link" id="profileLink">Profile</a>
+    <a href="https://www.instagram.com/zidan_ibrahimovich?igsh=aW5nZDNmMmlsN21m" target="_blank">Instagram</a>
+  </nav>
+</header>
+
+<main>
+  <!-- Halaman Utama -->
+  <section id="homeSection" class="hero">
+    <div class="intro">
+      <h2>Ingin Menjadi Investor Hebat</h2>
+      <p>Saya Zidane — seseorang yang ingin tumbuh menjadi investor profesional, mempelajari analisis pasar, memahami risiko, dan berdisiplin membangun portofolio yang sehat.</p>
+      <a href="#" class="btn" id="toProfile">Lihat Profil Saya</a>
+    </div>
+    <div class="chart-card">
+      <h3>Simulasi Performa Investasi</h3>
+      <canvas id="simChart" width="400" height="220"></canvas>
+    </div>
+  </section>
+
+  <!-- Halaman Profil -->
+  <section id="profileSection" class="profile">
+    <div class="profile-meta">
+      <div class="avatar-placeholder">ZI</div>
+      <div>
+        <h2>Zidane Ibrahimovich</h2>
+        <p class="subtitle">Calon Investor Hebat • Belajar Trading & Investasi</p>
+        <p><strong>Tentang Saya:</strong> Saya sedang berlatih menjadi investor profesional dengan memahami dasar-dasar keuangan, analisis saham, serta psikologi dalam pengambilan keputusan investasi.</p>
+        <a class="link-btn" href="https://www.instagram.com/zidan_ibrahimovich?igsh=aW5nZDNmMmlsN21m" target="_blank">Kunjungi Instagram Saya</a>
+      </div>
+    </div>
+
+    <div class="profile-stats">
+      <h3>📊 Biodata Diri</h3>
+      <ul>
+        <li><strong>Nama Lengkap:</strong> Zidane Ibrahimovich</li>
+        <li><strong>Domisili:</strong> Indonesia</li>
+        <li><strong>Minat:</strong> Investasi, Ekonomi, Trading, Teknologi</li>
+        <li><strong>Tujuan:</strong> Membangun kebebasan finansial jangka panjang</li>
+      </ul>
+    </div>
+
+    <div class="profile-stats" style="margin-top:18px;">
+      <h3>💡 Keahlian & Fokus</h3>
+      <ul>
+        <li>Analisis Fundamental</li>
+        <li>Analisis Teknikal (Chart Reading)</li>
+        <li>Manajemen Risiko</li>
+        <li>Strategi Jangka Menengah</li>
+        <li>Psikologi Trading & Disiplin</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer>
+  © <span id="year"></span> Zidane Ibrahimovich
+</footer>
+
+<!-- 📊 Script -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+
+const ctx = document.getElementById("simChart");
+if (ctx) {
+  new Chart(ctx, {
+    type: "line",
+    data: {
+      labels: ["Jan","Feb","Mar","Apr","Mei","Jun","Jul","Agu"],
+      datasets: [{
+        data: [10000,10500,9700,12000,13000,12500,14000,13800],
+        borderColor:"rgba(0,209,178,0.9)",
+        backgroundColor:"rgba(0,209,178,0.1)",
+        fill:true,
+        tension:0.3,
+        borderWidth:2
+      }]
+    },
+    options:{
+      plugins:{legend:{display:false}},
+      scales:{
+        x:{ticks:{color:"#9aa3b2"},grid:{display:false}},
+        y:{ticks:{color:"#9aa3b2"},grid:{color:"rgba(255,255,255,0.05)"}}
+      }
+    }
+  });
+}
+
+// Navigasi antar halaman (tanpa reload)
+const homeLink = document.getElementById("homeLink");
+const profileLink = document.getElementById("profileLink");
+const homeSection = document.getElementById("homeSection");
+const profileSection = document.getElementById("profileSection");
+const toProfile = document.getElementById("toProfile");
+
+function showHome(){
+  homeSection.style.display="grid";
+  profileSection.classList.remove("active");
+  homeLink.classList.add("active");
+  profileLink.classList.remove("active");
+}
+function showProfile(){
+  homeSection.style.display="none";
+  profileSection.classList.add("active");
+  profileLink.classList.add("active");
+  homeLink.classList.remove("active");
+}
+
+homeLink.addEventListener("click",e=>{e.preventDefault();showHome();});
+profileLink.addEventListener("click",e=>{e.preventDefault();showProfile();});
+toProfile.addEventListener("click",e=>{e.preventDefault();showProfile();});
+</script>
+</body>
+</html>
